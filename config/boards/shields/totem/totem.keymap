@@ -75,31 +75,36 @@
     };
 
 	behaviors {
-        td0: tap_dance_0 {
+	td0: tap_dance_0 {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp FSLH>, <&kp QMARK>;
-    };
-};
-
-behaviors {
+        tapping-term-ms = <300>;
+        bindings = <&sys_reset>, <&bootloader>;
+        };	
         td1: tap_dance_1 {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <300>;
+        bindings = <&kp FSLH>, <&kp QMARK>;
+	};
+	td2: tap_dance_2 {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
         bindings = <&kp LPAR>, <&kp LBKT>, <&kp LBRC>;
-    };
-};
-
-
-behaviors {
-        td2: tap_dance_2 {
+	};
+	td3: tap_dance_3 {
         compatible = "zmk,behavior-tap-dance";
         #binding-cells = <0>;
         tapping-term-ms = <200>;
-        bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
-    };
+        bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;    
+        }; 
+	td4: tap_dance_4 {
+        compatible = "zmk,behavior-tap-dance";
+        #binding-cells = <0>;
+        tapping-term-ms = <300>;
+        bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>, <&bt BT_SEL 2>, <&bt BT_SEL 3>, <&bt BT_SEL 4>;
+        };
 };
 
 
@@ -129,7 +134,7 @@ label= "BASE"                              ;
 
                     &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U         &kp I       &kp O       &kp P
                     &kp A       &hm LALT S  &hm LCTRL D &hm LSHFT F &kp G           &kp H       &hm LSHFT J   &hm LCTRL K &hm LALT L  &kp SEMI
-    &mt LSHFT ESC   &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M         &kp COMMA   &kp DOT     &td0    &kp LSHFT
+    &mt LSHFT ESC   &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M         &kp COMMA   &kp DOT     &td1    &kp LSHFT
                            &mt LCTRL DEL    &mt LSHFT TAB   &lt NAV SPACE	    &lt SYM RET  &mt LSHFT RALT  &kp BSPC
                         >;
                 };
@@ -155,7 +160,7 @@ label= "NAVI"                              ;
 
                 &caps_word  &none        &kp UP      &kp BSLH    &kp LBRC        &kp RBRC    &kp N7   &kp N8   &kp N9   &kp KP_PLUS
                 &none       &kp LEFT     &kp DOWN    &kp RIGHT   &kp LSHFT       &none	     &kp N4   &kp N5   &kp N6   &kp MINUS
-     &trans     &kp HOME    &kp END      &kp PG_UP   &kp PG_DN   &td1            &td2        &kp N1   &kp N2   &kp N3   &kp KP_MULTIPLY &trans     
+     &trans     &kp HOME    &kp END      &kp PG_UP   &kp PG_DN   &td2            &td3        &kp N1   &kp N2   &kp N3   &kp KP_MULTIPLY &trans     
                                          &trans      &trans      &trans          &mo ADJ     &kp N0   &kp EQUAL     
                         >;
                 };
@@ -205,9 +210,9 @@ label= "ADJ"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &sys_reset  &bt BT_CLR  &none	    &none       &none           &none       &none       &none       &none       &none
-                &bootloader &none       &none       &none       &tog GAME       &none       &none       &none       &none       &none  
-    &trans      &trans      &none       &none       &none       &none           &none       &none       &none       &none       &none     &none        
+                &sys_reset  &bt BT_CLR  &td4	    &none       &out OUT_TOG    &none       &none       &none       &none       &none
+                &bootloader &bt BT_NXT  &none       &none       &tog GAME       &none       &none       &none       &none       &none  
+    &trans      &trans      &bt BT_PRV  &none       &none       &none           &none       &none       &none       &none       &none     &none        
                                         &none       &none       &none           &none       &none     	 &none   
                         >;
                 };

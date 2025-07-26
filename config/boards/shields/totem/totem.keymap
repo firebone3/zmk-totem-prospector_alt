@@ -22,7 +22,7 @@
 #define SYM  2
 #define ADJ  3
 #define GAME 4
-#define TVP2 5
+#define DNF 5
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
@@ -211,7 +211,7 @@ label= "ADJ"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &sys_reset  &bt BT_CLR  &td4	    &none       &out OUT_TOG    &none       &none       &none       &none       &none
-                &bootloader &bt BT_NXT  &none       &none       &tog GAME       &none       &none       &none       &none       &none  
+                &bootloader &bt BT_NXT  &none       &none       &tog DNF        &none       &none       &none       &none       &none  
     &trans      &trans      &bt BT_PRV  &none       &none       &none           &none       &none       &none       &none       &none     &none        
                                         &none       &none       &none           &none       &none     	 &none   
                         >;
@@ -239,14 +239,14 @@ label= "GAME"                             ;
                 &kp Q       &kp W       &kp E       &kp R       &kp T          &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp SEMI
     &tog GAME   &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N       &kp M       &kp COMMA   &kp DOT     &td0      &kp LSHFT      
-                                        &none       &kp TAB     &kp SPACE      &kp LEFT    &kp UP      &kp RIGHT
+                                        &none       &kp TAB     &kp SPACE      &kp LEFT    &kp DOWN      &kp RIGHT
                         >;
                 };
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                tvp2_layer {
+                dnf_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 label= "TVP 2"                             ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛

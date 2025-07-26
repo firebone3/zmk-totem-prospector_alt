@@ -57,6 +57,7 @@
                 COMBO(dce, &kp LS(E), 02 12)
                 COMBO(dcr, &kp LS(R), 03 13)
                 COMBO(dct, &kp LS(T), 04 14)
+		COMBO(semi, &kp SEMI, 19 30)
     };
 
         behaviors {
@@ -133,7 +134,7 @@ label= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
               &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U         &kp I       &kp O       &kp P
-              &kp A       &hm LALT S  &hm LCTRL D &hm LSHFT F &kp G           &kp H       &hm LSHFT J   &hm LCTRL K &hm LALT L  &kp SEMI
+              &kp A       &hm LALT S  &hm LCTRL D &hm LSHFT F &kp G           &kp H       &hm LSHFT J   &hm LCTRL K &hm LALT L  &kp BSPC
     &kp ESC   &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M         &kp COMMA   &kp DOT     &td1    &kp LSHFT
                            &mt LCTRL DEL    &mt LSHFT TAB   &lt NAV SPACE	    &lt SYM RET  &mt LSHFT RALT  &kp BSPC
                         >;
@@ -237,8 +238,8 @@ label= "GAME"                             ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp Q       &kp W       &kp E       &kp R       &kp T          &kp Y       &kp U       &kp I       &kp O       &kp P
-                &kp A       &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp SEMI
-    &kp ESC     &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N       &kp M       &kp COMMA   &kp DOT     &td0      &tog GAME      
+                &kp A       &kp S       &kp D       &kp F       &kp G          &kp H       &kp J       &kp K       &kp L       &kp BSPC
+    &kp ESC     &kp Z       &kp X       &kp C       &kp V       &kp B          &kp N       &kp M       &kp COMMA   &kp DOT     &td1      &tog GAME      
                                         &kp DEL     &kp TAB     &kp SPACE      &kp LEFT    &kp DOWN      &kp RIGHT
                         >;
                 };
